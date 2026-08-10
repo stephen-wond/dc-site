@@ -1,4 +1,4 @@
-:HL["/dc-site/_next/static/chunks/43xutqhbcj6q1.css","style"]
+:HL["/dc-site/_next/static/chunks/311mb0rl9ng7j.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap","style"]
 :HL["/dc-site/assets/logo.avif","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"V-eFiMxQ21607hqNOagjK"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"YeUboFdbrmDebF-OQD4fT"}
