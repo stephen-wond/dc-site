@@ -64,7 +64,29 @@ he can paste whatever Drive gives him.
 - Real brand logo files for the marquee — it's text today.
 - An SVG logo, and a black-on-transparent variant for light backgrounds.
 
-## Deploy
+## Structure
 
-Push to GitHub, import into Vercel, set `SHEET_ID` (and optionally
-`YOUTUBE_API_KEY`). `revalidate = 3600` handles the rest — no cron, no server.
+- `/` — version picker (`app/page.tsx`)
+- `/v1` — the current design (`app/v1/`)
+
+To add a version: copy `app/v1` to `app/v2`, tweak it, then add a row to the
+`versions` array in `app/page.tsx`.
+
+## Publishing (GitHub Pages)
+
+Pages serves `docs/` on `main`. There is no CI — you publish by building
+locally and pushing:
+
+```bash
+npm run build:pages
+git add -A && git commit -m "update" && git push
+```
+
+Live at https://stephen-wond.github.io/dc-site/
+
+Because it is a static export, **content is a snapshot from build time**.
+New videos or sheet edits appear the next time you run `build:pages`.
+
+For the real site (not this mock-up), deploy to Vercel instead: drop
+`output: 'export'` from `next.config.mjs` and restore `export const revalidate
+= 3600`, and it updates itself hourly with no rebuild.

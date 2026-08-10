@@ -1,5 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { basePath } from '@/lib/config';
+
+export const metadata: Metadata = {
+  title: 'Daniel Cutting — website concepts',
+  description: 'Design concepts for review.',
+};
 
 export const dynamic = 'force-static';
 
@@ -59,7 +65,7 @@ export default function Index() {
         </ul>
 
         <footer className="vindex-foot">
-          Rebuilt daily from the Google Sheet and the YouTube feeds.
+          Content comes from a Google Sheet and the YouTube feeds, baked in at build time. Push a new build to update.
         </footer>
       </div>
     </main>
