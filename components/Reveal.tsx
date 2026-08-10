@@ -1,0 +1,32 @@
+'use client';
+
+import { useEffect } from 'react';
+
+const TARGETS =
+  '.sec-head, .offers, .roster .card, .event, .rail-block, .latest-bar, .book aside, .book form';
+
+/** Adds the scroll-reveal behaviour the static prototype had, respecting reduced motion. */
+export function Reveal() {
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const els = Array.from(document.querySelectorAll<HTMLElement>(TARGETS));
+    els.forEach((el) => el.classList.add('rv'));
+
+    const io = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        }),
+      { threshold: 0.12 },
+    );
+
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
+  return null;
+}

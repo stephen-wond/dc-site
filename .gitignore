@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+.env.local
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+
+# build output is committed (docs/) so Pages can serve it
