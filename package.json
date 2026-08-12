@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:pages": "NEXT_PUBLIC_BASE_PATH=/dc-site next build && rm -rf docs && mv out docs && touch docs/.nojekyll"
+    "build:pages": "NEXT_PUBLIC_BASE_PATH=/dc-site next build && rm -rf docs && mv out docs && cp -R v2 docs/v2 && touch docs/.nojekyll"
   },
   "dependencies": {
     "next": "^16.3.0",

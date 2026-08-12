@@ -10,19 +10,53 @@ export const metadata: Metadata = {
 export const dynamic = 'force-static';
 
 /**
- * Version picker. Each entry is a self-contained design under app/<slug>/.
- * To add one: copy app/v1 to app/v2, then add a row here.
+ * Version picker. Newest first.
+ *
+ * `external: true` means the version is a plain static folder copied into
+ * docs/ at build time (not a Next route), so it needs a real <a>, not <Link>.
  */
 const versions = [
   {
-    slug: 'v1',
-    name: 'V1 — Red / dark',
+    slug: 'v2',
+    name: 'V2 — Light / editorial',
     date: 'August 2026',
-    status: 'Current',
+    status: 'Latest',
+    external: true,
     notes:
-      'Dark base with a signal-red accent. Full-bleed cut-out hero, vertical stats, live YouTube rails and a Google Sheet driving events, people and brands.',
+      'Light editorial treatment on an off-white base with a deep red accent. Multi-page: events, camps, brands, about, contact and a Daniel & Joshua page, plus a video hero and a real client logo wall.',
+  },
+  {
+    slug: 'v1',
+    name: 'V1 — Dark / signal red',
+    date: 'August 2026',
+    status: 'Earlier concept',
+    external: false,
+    notes:
+      'Dark base with a signal-red accent. Single page: full-bleed cut-out hero, vertical stats, live YouTube rails and a Google Sheet driving events, people and brands.',
   },
 ];
+
+function VersionLink({
+  slug,
+  external,
+  children,
+}: {
+  slug: string;
+  external: boolean;
+  children: React.ReactNode;
+}) {
+  if (external)
+    return (
+      <a href={`${basePath}/${slug}/`} className="vcard">
+        {children}
+      </a>
+    );
+  return (
+    <Link href={`/${slug}`} className="vcard">
+      {children}
+    </Link>
+  );
+}
 
 export default function Index() {
   return (
@@ -46,7 +80,7 @@ export default function Index() {
         <ul className="vlist">
           {versions.map((v) => (
             <li key={v.slug}>
-              <Link href={`/${v.slug}`} className="vcard">
+              <VersionLink slug={v.slug} external={v.external}>
                 <div className="vcard-top">
                   <span className="vslug">{v.slug}</span>
                   <span className="vstatus">{v.status}</span>
@@ -59,7 +93,7 @@ export default function Index() {
                     View <span aria-hidden="true">→</span>
                   </span>
                 </div>
-              </Link>
+              </VersionLink>
             </li>
           ))}
         </ul>

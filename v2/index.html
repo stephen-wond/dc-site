@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { font-family: 'Instrument Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; background: #F7F7F5; }
+  * { box-sizing: border-box; }
+  a { color: #D92B12; text-decoration: none; }
+  a:hover { color: #FF4326; }
+  @keyframes dcken { from { transform: scale(1.03); } to { transform: scale(1.14); } }
+  @keyframes dcrun { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  ::selection { background: #D92B12; color: #fff; }
+</style>
+</helmet>
+<div style="background:#F7F7F5;color:#101214;font-family:'Instrument Sans','Helvetica Neue',Helvetica,sans-serif;width:100%;overflow-x:hidden;-webkit-font-smoothing:antialiased">
+
+  <div style="{{ railStyle }}">
+    <div style="font-size:9px;font-weight:700;letter-spacing:0.08em;color:#fff;text-align:center;line-height:1;text-shadow:0 1px 2px rgba(0,0,0,0.85)">DC</div>
+      <a href="https://www.youtube.com/channel/UCw5fGoKFgvzk9ZEegkScrtQ" title="Daniel — YouTube" style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;opacity:0.72" style-hover="opacity:1;filter:brightness(0) saturate(100%) invert(28%) sepia(96%) saturate(4500%) hue-rotate(360deg) brightness(103%) contrast(105%)"><img src="https://cdn.simpleicons.org/youtube/ffffff" alt="Daniel YouTube" style="width:13px;height:13px;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))" /></a>
+      <a href="https://www.instagram.com/dcfreestyle/" title="Daniel — Instagram" style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;opacity:0.72" style-hover="opacity:1;filter:brightness(0) saturate(100%) invert(28%) sepia(96%) saturate(4500%) hue-rotate(360deg) brightness(103%) contrast(105%)"><img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Daniel Instagram" style="width:13px;height:13px;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))" /></a>
+      <a href="https://www.tiktok.com/@dcfreestyle" title="Daniel — TikTok" style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;opacity:0.72" style-hover="opacity:1;filter:brightness(0) saturate(100%) invert(28%) sepia(96%) saturate(4500%) hue-rotate(360deg) brightness(103%) contrast(105%)"><img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="Daniel TikTok" style="width:13px;height:13px;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))" /></a>
+    <div style="width:12px;height:1px;background:rgba(255,255,255,0.25)"></div>
+    <div style="font-size:9px;font-weight:700;letter-spacing:0.08em;color:#fff;text-align:center;line-height:1;text-shadow:0 1px 2px rgba(0,0,0,0.85)">JC</div>
+      <a href="https://www.youtube.com/channel/UC4_nT1QyTMjoqV0cgE9zssg" title="Joshua — YouTube" style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;opacity:0.72" style-hover="opacity:1;filter:brightness(0) saturate(100%) invert(28%) sepia(96%) saturate(4500%) hue-rotate(360deg) brightness(103%) contrast(105%)"><img src="https://cdn.simpleicons.org/youtube/ffffff" alt="Joshua YouTube" style="width:13px;height:13px;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))" /></a>
+      <a href="https://www.instagram.com/joshuacutting/" title="Joshua — Instagram" style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;opacity:0.72" style-hover="opacity:1;filter:brightness(0) saturate(100%) invert(28%) sepia(96%) saturate(4500%) hue-rotate(360deg) brightness(103%) contrast(105%)"><img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Joshua Instagram" style="width:13px;height:13px;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))" /></a>
+      <a href="https://www.tiktok.com/@joshuacutting" title="Joshua — TikTok" style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;opacity:0.72" style-hover="opacity:1;filter:brightness(0) saturate(100%) invert(28%) sepia(96%) saturate(4500%) hue-rotate(360deg) brightness(103%) contrast(105%)"><img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="Joshua TikTok" style="width:13px;height:13px;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))" /></a>
+  </div>
+
+  <header style="{{ headerStyle }}">
+    <a href="#top" style="display:flex;align-items:center;gap:clamp(8px,1vw,14px);color:#fff;flex:none">
+      <img src="assets/logo.avif" alt="Daniel Cutting" style="height:clamp(22px,2.4vw,30px);width:auto;display:block" />
+      <span style="font-family:Anton,Impact,sans-serif;font-size:clamp(18px,1.9vw,24px);letter-spacing:0.01em;text-transform:uppercase;white-space:nowrap">Daniel<span style="color:#FF3B21">Cutting</span></span>
+    </a>
+    {{ nav }}
+  </header>
+
+  <section id="top" data-screen-label="Hero" style="{{ heroGrid }}">
+    {{ montage }}
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,11,0.92) 0%,rgba(10,10,11,0.55) 38%,rgba(10,10,11,0.5) 62%,rgba(10,10,11,0.92) 100%)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,11,0.8) 0%,rgba(10,10,11,0.25) 42%,rgba(10,10,11,0.85) 100%)"></div>
+
+    <div style="{{ heroCopy }}">
+      <div ref="{{ credRef }}" style="{{ credWrap }}">
+        <span style="{{ credRule }}"></span>
+        <div style="{{ credList }}">
+          <span style="{{ credItem }}">YouTuber<span style="{{ credSep }}">·</span></span>
+          <span style="{{ credItem }}">Football Freestyler<span style="{{ credSep }}">·</span></span>
+          <span style="{{ credItem }}">Entertainer<span style="{{ credSep }}">·</span></span>
+          <span style="{{ credItem }}">10× World Record Holder</span>
+        </div>
+      </div>
+      <h1 style="margin:22px 0 0;font-family:Anton,Impact,sans-serif;font-size:clamp(50px,6.4vw,104px);line-height:0.86;letter-spacing:0.005em;text-transform:uppercase;text-shadow:0 4px 40px rgba(0,0,0,0.45)">Meet your favourite<br /><span style="display:inline-block;transform:skewX(-9deg)">football YouTubers.</span></h1>
+      <p style="margin:30px 0 0;max-width:520px;font-size:19px;line-height:1.55;color:rgba(255,255,255,0.82)">Daniel and Joshua are available for events, appearances, parties and fan experiences.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:36px">
+        <a href="#contact" style="{{ heroBtn }}" style-hover="border-color:#fff;color:#fff">Book Daniel &amp; Joshua<span style="font-size:15px;line-height:1">↓</span></a>
+        <a href="#brands" style="{{ heroBtn }}" style-hover="border-color:#fff;color:#fff">Work with Daniel<span style="font-size:15px;line-height:1">↓</span></a>
+      </div>
+    </div>
+
+
+    <div style="{{ statsStyle }}">
+      <div style="{{ statBox }}">
+        <div style="font-family:Anton,Impact,sans-serif;font-size:clamp(38px,3.4vw,54px);line-height:0.92;letter-spacing:0.01em;color:#fff">5<span style="color:#FF3B21">M+</span></div>
+        <div style="{{ statLabel }}"><span style="font-size:11.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.62)">Followers</span></div>
+      </div>
+      <div style="{{ statBox }}">
+        <div style="font-family:Anton,Impact,sans-serif;font-size:clamp(38px,3.4vw,54px);line-height:0.92;letter-spacing:0.01em;color:#fff">2<span style="color:#FF3B21">M+</span></div>
+        <div style="{{ statLabel }}"><img src="https://cdn.simpleicons.org/youtube/ffffff" alt="" style="width:13px;height:13px;display:block;opacity:0.65;flex:none" /><span style="font-size:11.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.62)">YouTube</span></div>
+      </div>
+      <div style="{{ statBox }}">
+        <div style="font-family:Anton,Impact,sans-serif;font-size:clamp(38px,3.4vw,54px);line-height:0.92;letter-spacing:0.01em;color:#fff">1.6<span style="color:#FF3B21">M+</span></div>
+        <div style="{{ statLabel }}"><img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="" style="width:13px;height:13px;display:block;opacity:0.65;flex:none" /><span style="font-size:11.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.62)">TikTok</span></div>
+      </div>
+      <div style="{{ statBox }}">
+        <div style="font-family:Anton,Impact,sans-serif;font-size:clamp(38px,3.4vw,54px);line-height:0.92;letter-spacing:0.01em;color:#fff">500<span style="color:#FF3B21">K+</span></div>
+        <div style="{{ statLabel }}"><img src="https://cdn.simpleicons.org/instagram/ffffff" alt="" style="width:13px;height:13px;display:block;opacity:0.65;flex:none" /><span style="font-size:11.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.62)">Instagram</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Clients" aria-label="Selected clients" style="padding:clamp(36px,5vw,56px) 0;background:#0E0F11;overflow:hidden">
+    <div style="display:flex;width:max-content;align-items:center;animation:dcrun 50s linear infinite">
+      <div style="display:flex;gap:56px;align-items:center;padding-left:clamp(20px,3vw,44px)">
+        <img src="assets/logos/adidas.avif" alt="adidas" style="height:30px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/coca-cola.avif" alt="Coca-Cola" style="height:40px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/bbc.avif" alt="BBC" style="height:24px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/champions-league.avif" alt="UEFA Champions League" style="height:44px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/bt.avif" alt="BT" style="height:28px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/carlsberg.avif" alt="Carlsberg" style="height:30px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/fa.avif" alt="The FA" style="height:42px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/game.avif" alt="GAME" style="height:26px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/htc.avif" alt="HTC" style="height:28px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/london-2021.avif" alt="London 2012" style="height:38px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+      </div>
+      <div style="display:flex;gap:56px;align-items:center;padding-left:clamp(20px,3vw,44px)" aria-hidden="true">
+        <img src="assets/logos/adidas.avif" alt="" style="height:30px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/coca-cola.avif" alt="" style="height:40px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/bbc.avif" alt="" style="height:24px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/champions-league.avif" alt="" style="height:44px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/bt.avif" alt="" style="height:28px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/carlsberg.avif" alt="" style="height:30px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/fa.avif" alt="" style="height:42px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/game.avif" alt="" style="height:26px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/htc.avif" alt="" style="height:28px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+        <img src="assets/logos/london-2021.avif" alt="" style="height:38px;width:auto;display:block;flex:none;filter:grayscale(1) invert(1);opacity:0.82" />
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Two doors" style="background:#0E0F11">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:2px">
+      <a href="#brands" style="position:relative;display:block;min-height:clamp(320px,34vw,420px);overflow:hidden;text-decoration:none;color:#fff" style-hover="color:#fff">
+        <img src="assets/mane.avif" alt="Filming a brand campaign" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(196,42,18,0.42) 0%,rgba(196,42,18,0.86) 100%)"></div>
+        <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(26px,3vw,42px);min-height:clamp(320px,34vw,420px)">
+          <div style="font-family:Anton,Impact,sans-serif;font-size:clamp(30px,3.4vw,48px);line-height:0.94;text-transform:uppercase;text-shadow:0 2px 20px rgba(0,0,0,0.35)">Much more than<br />a live appearance</div>
+          <p style="margin:18px 0 0;max-width:420px;font-size:16.5px;line-height:1.55;color:rgba(255,255,255,0.92)">Brand activations, social campaigns, content creation and product integrations — concepted, filmed and delivered in-house.</p>
+          <div style="margin-top:24px;display:inline-flex;align-items:center;gap:14px;align-self:flex-start;padding:15px 26px;border-radius:999px;border:1px solid rgba(255,255,255,0.55);font-size:11.5px;font-weight:400;letter-spacing:0.14em;color:rgba(255,255,255,0.7)">for <span style="font-weight:700;text-transform:uppercase;font-size:14.5px;letter-spacing:0.1em;color:#fff">brands</span> and <span style="font-weight:700;text-transform:uppercase;font-size:14.5px;letter-spacing:0.1em;color:#fff">commercial</span><span style="font-size:15px;line-height:1">↓</span></div>
+        </div>
+      </a>
+      <a href="#events" style="position:relative;display:block;min-height:clamp(320px,34vw,420px);overflow:hidden;text-decoration:none;color:#fff" style-hover="color:#fff">
+        <img src="assets/round-the-world.avif" alt="Performing to a crowd" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,11,0.34) 0%,rgba(10,10,11,0.88) 100%)"></div>
+        <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(26px,3vw,42px);min-height:clamp(320px,34vw,420px)">
+          <div style="font-family:Anton,Impact,sans-serif;font-size:clamp(30px,3.4vw,48px);line-height:0.94;text-transform:uppercase;text-shadow:0 2px 20px rgba(0,0,0,0.35)">Meet them<br />in person</div>
+          <p style="margin:18px 0 0;max-width:420px;font-size:16.5px;line-height:1.55;color:rgba(247,247,245,0.78)">Parties, barmitzvahs, corporate events, schools and clubs. Freestyle, entertainment, photos and autographs.</p>
+          <div style="margin-top:24px;display:inline-flex;align-items:center;gap:14px;align-self:flex-start;padding:15px 26px;border-radius:999px;border:1px solid rgba(255,255,255,0.55);font-size:11.5px;font-weight:400;letter-spacing:0.14em;color:rgba(255,255,255,0.7)">for <span style="font-weight:700;text-transform:uppercase;font-size:14.5px;letter-spacing:0.1em;color:#fff">events</span> and <span style="font-weight:700;text-transform:uppercase;font-size:14.5px;letter-spacing:0.1em;color:#fff">appearances</span><span style="font-size:15px;line-height:1">↓</span></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="events" data-screen-label="Events" style="padding:clamp(64px,9vw,120px) clamp(20px,3.4vw,44px)">
+    <div style="font-size:12px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#D92B12">Events &amp; appearances</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(24px,4vw,72px);margin-top:26px;align-items:end">
+      <h2 style="margin:0;font-size:clamp(40px,4.6vw,68px);line-height:0.96;font-weight:700;letter-spacing:-0.05em">Kids can meet their favourite football YouTubers in person.</h2>
+      <p style="margin:0;font-size:18px;line-height:1.6;color:rgba(16,18,20,0.68)">Daniel, or Daniel and Joshua together, can be booked for football freestyle, entertainment and audience interaction — plus photos, autographs and time spent meeting fans.</p>
+    </div>
+
+    <a href="#contact" style="display:inline-flex;align-items:center;gap:14px;margin-top:34px;padding:16px 28px;border-radius:999px;border:1px solid rgba(16,18,20,0.25);color:#101214;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase" style-hover="border-color:#101214;color:#101214">Book an appearance<span style="font-size:15px;line-height:1">↓</span></a>
+
+    <div style="{{ mosaicGrid }}">
+      <div style="position:relative;overflow:hidden;grid-column:span 2;grid-row:span 2;">
+        {{ eventFilm }}
+        <div style="position:absolute;left:20px;bottom:16px;z-index:3;color:#fff;font-family:Anton,Impact,sans-serif;font-size:clamp(19px,1.9vw,26px);text-transform:uppercase;line-height:1;text-shadow:0 2px 14px rgba(0,0,0,0.45)">Football events</div>
+      </div>
+      <div style="position:relative;overflow:hidden;">
+        <img src="assets/wedding.avif" alt="Parties" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,18,20,0) 42%,rgba(16,18,20,0.86) 100%)"></div>
+        <div style="position:absolute;left:20px;bottom:16px;z-index:3;color:#fff;font-family:Anton,Impact,sans-serif;font-size:clamp(19px,1.9vw,26px);text-transform:uppercase;line-height:1;text-shadow:0 2px 14px rgba(0,0,0,0.45)">Parties</div>
+      </div>
+      <div style="position:relative;overflow:hidden;">
+        <img src="assets/hanging.avif" alt="Barmitzvahs" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,18,20,0) 42%,rgba(16,18,20,0.86) 100%)"></div>
+        <div style="position:absolute;left:20px;bottom:16px;z-index:3;color:#fff;font-family:Anton,Impact,sans-serif;font-size:clamp(19px,1.9vw,26px);text-transform:uppercase;line-height:1;text-shadow:0 2px 14px rgba(0,0,0,0.45)">Barmitzvahs</div>
+      </div>
+      <div style="position:relative;overflow:hidden;grid-column:span 2;">
+        <img src="assets/flat-feet.avif" alt="Corporate events" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,18,20,0) 42%,rgba(16,18,20,0.86) 100%)"></div>
+        <div style="position:absolute;left:20px;bottom:16px;z-index:3;color:#fff;font-family:Anton,Impact,sans-serif;font-size:clamp(19px,1.9vw,26px);text-transform:uppercase;line-height:1;text-shadow:0 2px 14px rgba(0,0,0,0.45)">Corporate events</div>
+      </div>
+      <div style="position:relative;overflow:hidden;">
+        <img src="assets/kane.avif" alt="School and club events" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,18,20,0) 42%,rgba(16,18,20,0.86) 100%)"></div>
+        <div style="position:absolute;left:20px;bottom:16px;z-index:3;color:#fff;font-family:Anton,Impact,sans-serif;font-size:clamp(19px,1.9vw,26px);text-transform:uppercase;line-height:1;text-shadow:0 2px 14px rgba(0,0,0,0.45)">School &amp; club</div>
+      </div>
+      <div style="position:relative;overflow:hidden;">
+        <img src="assets/mane.avif" alt="Meet and greets" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,18,20,0) 42%,rgba(16,18,20,0.86) 100%)"></div>
+        <div style="position:absolute;left:20px;bottom:16px;z-index:3;color:#fff;font-family:Anton,Impact,sans-serif;font-size:clamp(19px,1.9vw,26px);text-transform:uppercase;line-height:1;text-shadow:0 2px 14px rgba(0,0,0,0.45)">Meet &amp; greets</div>
+      </div>
+      <div style="position:relative;overflow:hidden;grid-column:span 2;">
+        <img src="assets/world-record.avif" alt="Live performances" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,18,20,0) 42%,rgba(16,18,20,0.86) 100%)"></div>
+        <div style="position:absolute;left:20px;bottom:16px;z-index:3;color:#fff;font-family:Anton,Impact,sans-serif;font-size:clamp(19px,1.9vw,26px);text-transform:uppercase;line-height:1;text-shadow:0 2px 14px rgba(0,0,0,0.45)">Live performances</div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="camps" data-screen-label="Camps" style="position:relative;overflow:hidden">
+    <img src="assets/round-the-world.avif" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+    <div style="position:absolute;inset:0;background:rgba(16,18,20,0.72)"></div>
+    <div style="position:relative;z-index:2;padding:clamp(64px,9vw,120px) clamp(20px,3.4vw,44px);text-align:center;color:#fff">
+      <div style="font-size:11px;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:rgba(255,255,255,0.7)">Football camps</div>
+      <h2 style="margin:28px auto 0;max-width:900px;font-size:clamp(40px,4.8vw,72px);line-height:0.96;font-weight:700;letter-spacing:-0.05em">Join Daniel &amp; Joshua’s next football camp</h2>
+      <p style="margin:20px auto 0;max-width:520px;font-size:17.5px;line-height:1.6;color:rgba(255,255,255,0.78)">Enter your email and we will let you know as soon as the next camp is announced.</p>
+      <div style="margin:34px auto 0;max-width:520px">{{ campSignup }}</div>
+    </div>
+  </section>
+
+  <section id="duo" data-screen-label="Daniel &amp; Joshua" style="padding:clamp(64px,9vw,120px) clamp(20px,3.4vw,44px)">
+    <div style="font-size:12px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#D92B12">Daniel &amp; Joshua</div>
+    <h2 style="margin:30px 0 0;font-size:clamp(46px,5.8vw,86px);line-height:0.92;font-weight:700;letter-spacing:-0.05em;max-width:1000px">Two of them. One booking. Twice the reason to come.</h2>
+    <div style="{{ duoGrid }}">
+      <img src="assets/round-the-world.avif" alt="Daniel and Joshua at an event" style="width:100%;height:100%;object-fit:cover;display:block;min-height:0" />
+      <div style="{{ duoPortraits }}">
+        <img src="assets/daniel-crop.avif" alt="Daniel Cutting" style="width:100%;height:100%;object-fit:cover;object-position:center 28%;display:block;min-height:0" />
+        <img src="assets/joshua.jpg" alt="Joshua Cutting" style="width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;min-height:0" />
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(28px,4vw,80px);margin-top:56px;align-items:start">
+      <p style="margin:0;font-size:20px;line-height:1.6">Daniel and Joshua are available to perform, entertain, meet fans, take photos, sign autographs and create memorable experiences at events. For the children watching, it is the difference between seeing a show and meeting someone they already know.</p>
+      <div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:clamp(20px,3vw,40px)">
+          <div>
+            <div style="font-size:44px;font-weight:600;letter-spacing:-0.045em;line-height:1">2M+</div>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(16,18,20,0.18)"><img src="https://cdn.simpleicons.org/youtube/101214" alt="" style="width:13px;height:13px;display:block;opacity:0.6;flex:none" /><span style="font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:rgba(16,18,20,0.55)">Daniel — YouTube</span></div>
+          </div>
+          <div>
+            <div style="font-size:44px;font-weight:600;letter-spacing:-0.045em;line-height:1">644K</div>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(16,18,20,0.18)"><img src="https://cdn.simpleicons.org/youtube/101214" alt="" style="width:13px;height:13px;display:block;opacity:0.6;flex:none" /><span style="font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:rgba(16,18,20,0.55)">Joshua — YouTube</span></div>
+          </div>
+        </div>
+        <a href="#contact" style="display:inline-block;margin-top:34px;padding:17px 30px;border-radius:999px;border:1px solid rgba(16,18,20,0.3);color:#101214;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase" style-hover="border-color:#101214;color:#101214">Book Daniel &amp; Joshua</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="brands" data-screen-label="Brands" style="padding:clamp(64px,9vw,120px) clamp(20px,3.4vw,44px);background:#0E0F11;color:#F7F7F5">
+    <div style="font-size:12px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#FF3B21">Brands &amp; commercial</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(28px,4vw,80px);margin-top:28px;align-items:end">
+      <h2 style="margin:0;font-size:clamp(44px,5.4vw,80px);line-height:0.94;font-weight:700;letter-spacing:-0.05em">Football, entertainment, social media and content creation.</h2>
+      <p style="margin:0;font-size:18px;line-height:1.6;color:rgba(247,247,245,0.7)">Much more than live appearances — and, with the family content, a route to whole households rather than football fans alone.</p>
+    </div>
+
+    <div style="{{ capGrid }}">
+      <div style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:26px;padding:22px;background:#17191C;border:1px solid rgba(247,247,245,0.08);min-height:clamp(130px,13vw,170px);overflow:hidden">
+        <img src="assets/mane.avif" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0.42" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,15,17,0.32) 0%,rgba(14,15,17,0.74) 100%)"></div>
+        <div style="position:relative;z-index:2;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#FF3B21">01</div>
+        <div style="position:relative;z-index:2;font-size:clamp(15px,1.4vw,19px);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:#F7F7F5;text-wrap:balance">Brand activations</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:26px;padding:22px;background:#17191C;border:1px solid rgba(247,247,245,0.08);min-height:clamp(130px,13vw,170px);overflow:hidden">
+        <img src="assets/kane.avif" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0.42" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,15,17,0.32) 0%,rgba(14,15,17,0.74) 100%)"></div>
+        <div style="position:relative;z-index:2;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#FF3B21">02</div>
+        <div style="position:relative;z-index:2;font-size:clamp(15px,1.4vw,19px);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:#F7F7F5;text-wrap:balance">Social media campaigns</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:26px;padding:22px;background:#17191C;border:1px solid rgba(247,247,245,0.08);min-height:clamp(130px,13vw,170px);overflow:hidden">
+        <img src="assets/flat-feet.avif" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0.42" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,15,17,0.32) 0%,rgba(14,15,17,0.74) 100%)"></div>
+        <div style="position:relative;z-index:2;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#FF3B21">03</div>
+        <div style="position:relative;z-index:2;font-size:clamp(15px,1.4vw,19px);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:#F7F7F5;text-wrap:balance">Content creation</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:26px;padding:22px;background:#17191C;border:1px solid rgba(247,247,245,0.08);min-height:clamp(130px,13vw,170px);overflow:hidden">
+        <img src="assets/hanging.avif" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0.42" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,15,17,0.32) 0%,rgba(14,15,17,0.74) 100%)"></div>
+        <div style="position:relative;z-index:2;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#FF3B21">04</div>
+        <div style="position:relative;z-index:2;font-size:clamp(15px,1.4vw,19px);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:#F7F7F5;text-wrap:balance">YouTube, TikTok &amp; Instagram</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:26px;padding:22px;background:#17191C;border:1px solid rgba(247,247,245,0.08);min-height:clamp(130px,13vw,170px);overflow:hidden">
+        <img src="assets/world-record.avif" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0.42" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,15,17,0.32) 0%,rgba(14,15,17,0.74) 100%)"></div>
+        <div style="position:relative;z-index:2;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#FF3B21">05</div>
+        <div style="position:relative;z-index:2;font-size:clamp(15px,1.4vw,19px);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:#F7F7F5;text-wrap:balance">Product integrations</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:26px;padding:22px;background:#17191C;border:1px solid rgba(247,247,245,0.08);min-height:clamp(130px,13vw,170px);overflow:hidden">
+        <img src="assets/round-the-world.avif" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0.42" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,15,17,0.32) 0%,rgba(14,15,17,0.74) 100%)"></div>
+        <div style="position:relative;z-index:2;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#FF3B21">06</div>
+        <div style="position:relative;z-index:2;font-size:clamp(15px,1.4vw,19px);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:#F7F7F5;text-wrap:balance">Media appearances</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:26px;padding:22px;background:#17191C;border:1px solid rgba(247,247,245,0.08);min-height:clamp(130px,13vw,170px);overflow:hidden">
+        <img src="assets/wedding.avif" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0.42" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,15,17,0.32) 0%,rgba(14,15,17,0.74) 100%)"></div>
+        <div style="position:relative;z-index:2;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#FF3B21">07</div>
+        <div style="position:relative;z-index:2;font-size:clamp(15px,1.4vw,19px);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:#F7F7F5;text-wrap:balance">Live performances</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:26px;padding:22px;background:#17191C;border:1px solid rgba(247,247,245,0.08);min-height:clamp(130px,13vw,170px);overflow:hidden">
+        <img src="assets/daniel-crop.avif" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0.42" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,15,17,0.32) 0%,rgba(14,15,17,0.74) 100%)"></div>
+        <div style="position:relative;z-index:2;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#FF3B21">08</div>
+        <div style="position:relative;z-index:2;font-size:clamp(15px,1.4vw,19px);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:#F7F7F5;text-wrap:balance">Brand launches</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:26px;padding:22px;background:#17191C;border:1px solid rgba(247,247,245,0.08);min-height:clamp(130px,13vw,170px);overflow:hidden">
+        <img src="assets/joshua.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0.42" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,15,17,0.32) 0%,rgba(14,15,17,0.74) 100%)"></div>
+        <div style="position:relative;z-index:2;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#FF3B21">09</div>
+        <div style="position:relative;z-index:2;font-size:clamp(15px,1.4vw,19px);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:#F7F7F5;text-wrap:balance">Custom football campaigns</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:26px;padding:22px;background:#17191C;border:1px solid rgba(247,247,245,0.08);min-height:clamp(130px,13vw,170px);overflow:hidden">
+        <img src="assets/mane.avif" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0.42" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,15,17,0.32) 0%,rgba(14,15,17,0.74) 100%)"></div>
+        <div style="position:relative;z-index:2;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#FF3B21">10</div>
+        <div style="position:relative;z-index:2;font-size:clamp(15px,1.4vw,19px);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:#F7F7F5;text-wrap:balance">Family content</div>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(64px,8vw,110px)">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:34px">
+        <h3 style="margin:0;font-family:Anton,Impact,sans-serif;font-size:clamp(30px,3.4vw,46px);text-transform:uppercase;line-height:1">Selected campaigns</h3>
+        <a href="#contact" style="font-size:11.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#FF3B21" style-hover="color:#ff6a52">Full deck on request →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(28px,3.4vw,52px)">
+      <div style="border-top:1px solid rgba(247,247,245,0.14);padding-top:26px">
+        <div style="position:relative;overflow:hidden;background:#000">{{ film1 }}</div>
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-top:20px">
+          <div style="flex:1;min-width:240px">
+            <img src="assets/logos/adidas.avif" alt="adidas" style="height:30px;width:auto;display:block;filter:grayscale(1) invert(1);opacity:0.9" />
+            <p style="margin:16px 0 0;font-size:17px;line-height:1.5;color:rgba(247,247,245,0.72);max-width:520px">Freestyle film with a Premier League forward, cut for vertical and delivered to both audiences.</p>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:clamp(30px,3.2vw,44px);font-weight:700;letter-spacing:-0.045em;line-height:1;color:#F7F7F5">4.2M</div>
+            <div style="margin-top:8px;font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#FF3B21">Views · TBC</div>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(247,247,245,0.14);padding-top:26px">
+        <div style="position:relative;overflow:hidden;background:#000">{{ film2 }}</div>
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-top:20px">
+          <div style="flex:1;min-width:240px">
+            <img src="assets/logos/bt.avif" alt="BT" style="height:28px;width:auto;display:block;filter:grayscale(1) invert(1);opacity:0.9" />
+            <p style="margin:16px 0 0;font-size:17px;line-height:1.5;color:rgba(247,247,245,0.72);max-width:520px">Skills challenge series filmed with an England international, built for broadcast and social.</p>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:clamp(30px,3.2vw,44px);font-weight:700;letter-spacing:-0.045em;line-height:1;color:#F7F7F5">2.8M</div>
+            <div style="margin-top:8px;font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#FF3B21">Views · TBC</div>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(247,247,245,0.14);padding-top:26px">
+        <div style="position:relative;overflow:hidden;background:#000">{{ film3 }}</div>
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-top:20px">
+          <div style="flex:1;min-width:240px">
+            <img src="assets/logos/coca-cola.avif" alt="Coca-Cola" style="height:34px;width:auto;display:block;filter:grayscale(1) invert(1);opacity:0.9" />
+            <p style="margin:16px 0 0;font-size:17px;line-height:1.5;color:rgba(247,247,245,0.72);max-width:520px">A single location shoot turned into a month of short-form content across three platforms.</p>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:clamp(30px,3.2vw,44px);font-weight:700;letter-spacing:-0.045em;line-height:1;color:#F7F7F5">1.9M</div>
+            <div style="margin-top:8px;font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#FF3B21">Views · TBC</div>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(247,247,245,0.14);padding-top:26px">
+        <div style="position:relative;overflow:hidden;background:#000">{{ film4 }}</div>
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-top:20px">
+          <div style="flex:1;min-width:240px">
+            <img src="assets/logos/champions-league.avif" alt="UEFA Champions League" style="height:38px;width:auto;display:block;filter:grayscale(1) invert(1);opacity:0.9" />
+            <p style="margin:16px 0 0;font-size:17px;line-height:1.5;color:rgba(247,247,245,0.72);max-width:520px">Matchday activation and live performance in front of a stadium audience, filmed for social.</p>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:clamp(30px,3.2vw,44px);font-weight:700;letter-spacing:-0.045em;line-height:1;color:#F7F7F5">3.4M</div>
+            <div style="margin-top:8px;font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#FF3B21">Views · TBC</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div style="margin-top:26px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:0.05em;color:rgba(247,247,245,0.45)">[ figures are placeholders — real campaign films and view counts to be confirmed ]</div>
+    </div>
+  </section>
+
+  <section id="about" data-screen-label="About" style="padding:clamp(64px,9vw,120px) clamp(20px,3.4vw,44px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(28px,4vw,80px);align-items:center">
+      <img src="assets/world-record.avif" alt="Daniel with a Guinness World Record certificate" style="width:100%;height:clamp(280px,42vw,500px);object-fit:cover;display:block" />
+      <div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#D92B12">About Daniel</div>
+        <h2 style="margin:30px 0 0;font-size:clamp(42px,4.8vw,72px);line-height:0.96;font-weight:700;letter-spacing:-0.05em">Fifteen years, ten world records.</h2>
+        <p style="margin:26px 0 0;font-size:18px;line-height:1.65;color:rgba(16,18,20,0.75)">Daniel Cutting is a football freestyler, YouTuber and entertainer. A competitive freestyle career became a performance craft, and then a channel followed by millions of people around the world.</p>
+        <p style="margin:18px 0 0;font-size:18px;line-height:1.65;color:rgba(16,18,20,0.75)">Today the work spans three things: live shows and appearances, content across YouTube, TikTok and Instagram, and campaigns for brands. Joshua now has a channel and an audience of his own, and the videos they make together are the most-watched on the channel.</p>
+        <div style="margin-top:22px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:0.05em;color:rgba(16,18,20,0.45)">[ draft copy — for Daniel to edit ]</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-screen-label="Contact" style="padding:clamp(64px,9vw,120px) clamp(20px,3.4vw,44px);background:#101214;color:#F7F7F5">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(32px,4vw,80px);align-items:start">
+      <div>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:rgba(247,247,245,0.6)">Contact &amp; booking</div>
+        <h2 style="margin:30px 0 0;font-size:clamp(46px,5.4vw,80px);line-height:0.94;font-weight:700;letter-spacing:-0.05em">Get in touch.</h2>
+        <p style="margin:24px 0 0;font-size:18px;line-height:1.6;color:rgba(247,247,245,0.7);max-width:400px">Tell us who you are and what you have in mind. Enquiries are usually answered within two working days.</p>
+        <a href="mailto:danielcuttingenquiries@gmail.com" style="display:inline-block;margin-top:22px;font-size:16px;color:#F7F7F5;border-bottom:1px solid rgba(247,247,245,0.35);padding-bottom:4px" style-hover="color:#fff">danielcuttingenquiries@gmail.com</a>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:rgba(247,247,245,0.55)">Who is this for</div>
+        <div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:16px">
+          <button onClick="{{ pickWhoDaniel }}" style="{{ whoDaniel }}">Daniel</button>
+          <button onClick="{{ pickWhoDuo }}" style="{{ whoDuo }}">Daniel &amp; Joshua</button>
+        </div>
+        <div style="margin-top:28px;font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:rgba(247,247,245,0.55)">Enquiry type</div>
+        <div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:16px">
+          <button onClick="{{ pickEvents }}" style="{{ chipEvents }}">Events</button>
+          <button onClick="{{ pickBrands }}" style="{{ chipBrands }}">Brands</button>
+          <button onClick="{{ pickContent }}" style="{{ chipContent }}">Content</button>
+          <button onClick="{{ pickMedia }}" style="{{ chipMedia }}">Media</button>
+          <button onClick="{{ pickOther }}" style="{{ chipOther }}">Other</button>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:14px;margin-top:32px">
+          <input placeholder="Name" style="padding:16px 18px;border-radius:4px;border:1px solid rgba(247,247,245,0.22);background:rgba(247,247,245,0.05);color:#F7F7F5;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none" />
+          <input placeholder="Email" style="padding:16px 18px;border-radius:4px;border:1px solid rgba(247,247,245,0.22);background:rgba(247,247,245,0.05);color:#F7F7F5;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none" />
+          <input placeholder="Company / organisation" style="padding:16px 18px;border-radius:4px;border:1px solid rgba(247,247,245,0.22);background:rgba(247,247,245,0.05);color:#F7F7F5;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none" />
+          <input placeholder="Date or timeline" style="padding:16px 18px;border-radius:4px;border:1px solid rgba(247,247,245,0.22);background:rgba(247,247,245,0.05);color:#F7F7F5;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none" />
+        </div>
+        <textarea placeholder="Tell us about it" rows="5" style="width:100%;margin-top:14px;padding:16px 18px;border-radius:4px;border:1px solid rgba(247,247,245,0.22);background:rgba(247,247,245,0.05);color:#F7F7F5;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none;resize:vertical"></textarea>
+        <button style="margin-top:20px;padding:18px 38px;border-radius:999px;border:none;background:#F7F7F5;color:#101214;font-family:'Instrument Sans',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer" style-hover="background:#fff">Send enquiry</button>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:clamp(36px,5vw,52px) clamp(20px,3.4vw,44px);display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:10px">
+      <img src="assets/logo.avif" alt="" style="height:22px;width:auto;display:block;filter:invert(1)" />
+      <span style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase">Daniel Cutting</span>
+    </div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap">
+      <a href="https://www.youtube.com/channel/UCw5fGoKFgvzk9ZEegkScrtQ" style="font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(16,18,20,0.6)" style-hover="color:#D92B12">YouTube</a>
+      <a href="https://www.instagram.com/dcfreestyle/" style="font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(16,18,20,0.6)" style-hover="color:#D92B12">Instagram</a>
+      <a href="https://www.tiktok.com/@dcfreestyle" style="font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(16,18,20,0.6)" style-hover="color:#D92B12">TikTok</a>
+    </div>
+    <div style="font-size:12px;color:rgba(16,18,20,0.45);max-width:460px">© 2026 Daniel Cutting. All content featuring the children is created and managed by their parents.</div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;youtubeIds&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;YEfaogWLHYU, jgNVARUkEBU, 8c3M-zwqSRw, oqSu4NdpP7k&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;youtubePlaylist&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;randomClips&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;clipSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:10,&quot;min&quot;:5,&quot;max&quot;:25,&quot;step&quot;:1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;heroVideo&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
+class Component extends DCLogic {
+  state = { clip: 0, enquiry: 'Events', ytOk: false, campOpen: false, narrow: false, tiny: false, menu: false };
+
+  navEl() {
+    const links = [['#top','Home'],['events.html','Events'],['daniel-and-joshua.html','Daniel & Joshua'],['brands.html','Brands'],['about.html','About'],['camps.html','Camps'],['contact.html','Contact']];
+    const pill = {
+      padding: '13px 26px', borderRadius: 999,
+      border: '1px solid rgba(255,255,255,0.45)', color: '#fff',
+      fontSize: 12.5, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase',
+      whiteSpace: 'nowrap', textDecoration: 'none', flex: 'none',
+      opacity: this.state.scrolled ? 1 : 0,
+      pointerEvents: this.state.scrolled ? 'auto' : 'none',
+      transition: 'opacity 300ms ease'
+    };
+    if (!this.state.narrow) {
+      return React.createElement('nav', { style: { display: 'flex', alignItems: 'center', gap: 'clamp(11px,1.9vw,32px)', flexWrap: 'nowrap', minWidth: 0 } },
+        links.map(([h, t]) => React.createElement('a', {
+          key: h, href: h,
+          style: { fontSize: 'clamp(12.5px,1.15vw,15px)', fontWeight: 400, color: 'rgba(255,255,255,0.82)', whiteSpace: 'nowrap', textDecoration: 'none' }
+        }, t)),
+        React.createElement('a', { key: 'cta', href: '#contact', style: { ...pill, marginLeft: 'clamp(4px,1vw,16px)', padding: 'clamp(11px,1.3vw,14px) clamp(16px,2.2vw,30px)', fontSize: 'clamp(12px,1.1vw,15px)' } }, 'Book / Enquire')
+      );
+    }
+    const open = this.state.menu;
+    return React.createElement('div', { style: { display: 'flex', alignItems: 'center', gap: 12 } },
+      React.createElement('a', { href: '#contact', style: { ...pill, padding: '9px 16px', fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 700 } }, 'Enquire'),
+      React.createElement('button', {
+        'aria-label': 'Menu',
+        onClick: () => this.setState({ menu: !open }),
+        style: {
+          width: 36, height: 36, borderRadius: 8, cursor: 'pointer',
+          background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)',
+          display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 5
+        }
+      },
+        [0, 1, 2].map(i => React.createElement('span', {
+          key: i,
+          style: {
+            display: 'block', width: 18, height: 2, background: '#fff', borderRadius: 2,
+            transition: 'transform 220ms ease, opacity 180ms ease',
+            transform: open ? (i === 0 ? 'translateY(7px) rotate(45deg)' : i === 2 ? 'translateY(-7px) rotate(-45deg)' : 'none') : 'none',
+            opacity: open && i === 1 ? 0 : 1
+          }
+        }))
+      ),
+      open && React.createElement('div', {
+        style: {
+          position: 'fixed', top: 62, left: 10, right: 10, zIndex: 70,
+          padding: 14, borderRadius: 16,
+          background: 'rgba(10,10,11,0.94)', border: '1px solid rgba(255,255,255,0.12)',
+          backdropFilter: 'blur(18px)', display: 'flex', flexDirection: 'column'
+        }
+      }, links.map(([h, t], i) => React.createElement('a', {
+        key: h, href: h, onClick: () => this.setState({ menu: false }),
+        style: {
+          padding: '15px 10px', fontSize: 17, fontWeight: 500, color: '#fff', textDecoration: 'none',
+          borderTop: i ? '1px solid rgba(255,255,255,0.1)' : 'none'
+        }
+      }, t)))
+    );
+  }
+
+  tileFilmEl(id, poster, alt) {
+    const playing = this.state.playing === id;
+    if (playing) {
+      return React.createElement('iframe', {
+        src: 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=' + id,
+        allow: 'autoplay; encrypted-media', title: alt,
+        style: { position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0, display: 'block' }
+      });
+    }
+    return React.createElement('div', {
+      style: { position: 'absolute', inset: 0, cursor: 'pointer' },
+      role: 'button', 'aria-label': 'Play ' + alt,
+      onClick: () => this.setState({ playing: id })
+    },
+      React.createElement('img', {
+        src: poster, alt: alt,
+        style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }
+      }),
+      React.createElement('div', {
+        style: { position: 'absolute', inset: 0, background: 'linear-gradient(180deg,rgba(16,18,20,0) 42%,rgba(16,18,20,0.86) 100%)' }
+      }),
+      React.createElement('div', {
+        style: {
+          position: 'absolute', right: 18, top: 18,
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          width: 46, height: 46, borderRadius: 999,
+          background: 'rgba(16,18,20,0.55)', border: '1px solid rgba(255,255,255,0.4)', backdropFilter: 'blur(6px)'
+        }
+      }, React.createElement('span', {
+        style: { display: 'block', width: 0, height: 0, marginLeft: 4, borderLeft: '12px solid #fff', borderTop: '8px solid transparent', borderBottom: '8px solid transparent' }
+      }))
+    );
+  }
+
+  campaignEl(id, poster, alt) {
+    const playing = this.state.playing === id;
+    const box = { position: 'relative', cursor: 'pointer', background: '#101214', overflow: 'hidden' };
+    if (playing) {
+      return React.createElement('div', { style: { ...box, aspectRatio: '16 / 9' } },
+        React.createElement('iframe', {
+          src: 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1',
+          allow: 'autoplay; encrypted-media', title: alt,
+          style: { position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0, display: 'block' }
+        }),
+        React.createElement('a', {
+          href: 'https://www.youtube.com/watch?v=' + id, target: '_blank', rel: 'noreferrer',
+          style: {
+            position: 'absolute', right: 8, bottom: 8, zIndex: 2,
+            padding: '7px 12px', borderRadius: 999, background: 'rgba(16,18,20,0.78)',
+            color: '#fff', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.14em',
+            textTransform: 'uppercase', textDecoration: 'none', backdropFilter: 'blur(6px)'
+          }
+        }, 'Watch on YouTube')
+      );
+    }
+    return React.createElement('div', {
+      style: box, onClick: () => this.setState({ playing: id }),
+      role: 'button', 'aria-label': 'Play ' + alt
+    },
+      React.createElement('img', {
+        src: poster, alt: alt,
+        style: { width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', display: 'block' }
+      }),
+      React.createElement('div', {
+        style: {
+          position: 'absolute', left: 14, bottom: 14,
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          width: 58, height: 58, borderRadius: 999,
+          background: 'rgba(16,18,20,0.55)', border: '1px solid rgba(255,255,255,0.4)', backdropFilter: 'blur(6px)'
+        }
+      }, React.createElement('span', {
+        style: {
+          display: 'block', width: 0, height: 0, marginLeft: 5,
+          borderLeft: '15px solid #fff', borderTop: '10px solid transparent', borderBottom: '10px solid transparent'
+        }
+      }))
+    );
+  }
+
+  campSignupEl() {
+    const btn = {
+      padding: '17px 34px', borderRadius: 999, border: 'none', cursor: 'pointer',
+      fontFamily: "'Instrument Sans', sans-serif", fontSize: 12.5, fontWeight: 700,
+      letterSpacing: '0.14em', textTransform: 'uppercase',
+      background: '#FF3B21', color: '#fff'
+    };
+    if (!this.state.campOpen) {
+      return React.createElement('button', {
+        style: btn, onClick: () => this.setState({ campOpen: true })
+      }, 'Notify me about the next camp');
+    }
+    return React.createElement('div', { style: { display: 'flex', gap: 10 } },
+      React.createElement('input', {
+        type: 'email', placeholder: 'your@email.com', autoFocus: true,
+        style: {
+          flex: 1, padding: '17px 20px', borderRadius: 999,
+          border: '1px solid rgba(255,255,255,0.35)', background: 'rgba(255,255,255,0.08)',
+          color: '#fff', fontFamily: "'Instrument Sans', sans-serif", fontSize: 15, outline: 'none'
+        }
+      }),
+      React.createElement('button', { style: { ...btn, padding: '17px 30px' } }, 'Notify me')
+    );
+  }
+
+  credRef = el => { this.credEl = el; if (el) this.onResize(); };
+
+  onScroll = () => {
+    const hero = document.getElementById('top');
+    const past = hero ? window.scrollY > hero.getBoundingClientRect().height - 120 : window.scrollY > 400;
+    const solid = window.scrollY > 30;
+    if (past !== this.state.scrolled || solid !== this.state.barSolid) {
+      this.setState({ scrolled: past, barSolid: solid });
+    }
+  };
+
+  onResize = () => {
+    const w = window.innerWidth;
+    const narrow = w < 900, tiny = w < 560;
+    // stack the credential list off the COLUMN it lives in, not the viewport
+    let credStacked = this.state.credStacked;
+    if (this.credEl) {
+      const avail = this.credEl.getBoundingClientRect().width - 70; // rule + gap
+      credStacked = avail < 600;
+    }
+    if (narrow !== this.state.narrow || tiny !== this.state.tiny || credStacked !== this.state.credStacked) {
+      this.setState({ narrow, tiny, credStacked });
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    const hero = document.getElementById('top');
+    if (hero && window.IntersectionObserver) {
+      this.io = new IntersectionObserver(
+        ([e]) => this.setState({ scrolled: !e.isIntersecting, barSolid: window.scrollY > 30 }),
+        { rootMargin: '-120px 0px 0px 0px', threshold: 0 }
+      );
+      this.io.observe(hero);
+    }
+    this.onResize();
+    this.onScroll();
+    const secs = (this.props.montageSeconds ?? 7) * 1000;
+    this.timer = setInterval(() => this.setState(s => ({ clip: (s.clip + 1) % 4 })), secs);
+    this.setupYouTube();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.onScroll);
+    clearInterval(this.timer);
+    clearTimeout(this.clipTimer);
+    if (this.player && this.player.destroy) this.player.destroy();
+  }
+
+  videoIds() {
+    const raw = this.props.youtubeIds ?? 'OBDnpN6pZbE, DBfKmjI5-KA, a9KB9UY6Mt8, r1KbYjnsHW4';
+    return String(raw).split(/[\s,]+/).map(t => {
+      const m = t.match(/[?&]v=([\w-]{11})/) || t.match(/([\w-]{11})$/);
+      return m ? m[1] : null;
+    }).filter(Boolean);
+  }
+
+  playlistId() {
+    const raw = this.props.youtubePlaylist;
+    if (!raw) return null;
+    const m = String(raw).match(/[?&]list=([\w-]+)/) || String(raw).match(/^([\w-]{12,})$/);
+    return m ? m[1] : null;
+  }
+
+  jumpToRandomPoint() {
+    if (this.props.randomClips === false) return;
+    const d = this.player.getDuration();
+    const clip = this.props.clipSeconds ?? 10;
+    if (d && d > clip + 8) {
+      const start = 3 + Math.random() * (d - clip - 6);
+      this.player.seekTo(start, true);
+    }
+    this.scheduleNextClip();
+  }
+
+  scheduleNextClip() {
+    clearTimeout(this.clipTimer);
+    if (this.props.randomClips === false) return;
+    const ms = (this.props.clipSeconds ?? 10) * 1000;
+    this.clipTimer = setTimeout(() => {
+      this.jumped = false;
+      const list = this.player.getPlaylist && this.player.getPlaylist();
+      if (list && list.length > 1) {
+        this.player.playVideoAt(Math.floor(Math.random() * list.length));
+      } else {
+        const ids = this.videoIds();
+        if (ids.length > 1) {
+          const next = ids[Math.floor(Math.random() * ids.length)];
+          this.player.loadVideoById(next);
+        } else {
+          this.jumpToRandomPoint();
+        }
+      }
+    }, ms);
+  }
+
+  setupYouTube() {
+    if (this.props.heroVideo) return;
+    const list = this.playlistId();
+    const ids = this.videoIds();
+    if (!list && !ids.length) return;
+
+    const vars = {
+      autoplay: 1, mute: 1, controls: 0, playsinline: 1, loop: 1,
+      modestbranding: 1, rel: 0, disablekb: 1, fs: 0,
+      iv_load_policy: 3, cc_load_policy: 0, annotations: 0
+    };
+    if (!list) { vars.playlist = ids.join(','); }
+
+    const start = () => {
+      if (!this.ytHost || this.player) return;
+      this.player = new window.YT.Player(this.ytHost, {
+        videoId: ids.length ? ids[0] : undefined,
+        playerVars: vars,
+        events: {
+          onReady: e => {
+            e.target.mute();
+            if (e.target.unloadModule) { e.target.unloadModule('captions'); e.target.unloadModule('cc'); }
+            if (list) e.target.loadPlaylist({ list: list, listType: 'playlist', index: 0 });
+            e.target.playVideo();
+            const f = e.target.getIframe();
+            if (f) { f.style.width = '100%'; f.style.height = '100%'; f.style.border = '0'; }
+          },
+          onStateChange: e => {
+            if (e.data === 1) {
+              this.setState({ ytOk: true });
+              if (e.target.unloadModule) { e.target.unloadModule('captions'); e.target.unloadModule('cc'); }
+              if (!this.jumped) { this.jumped = true; this.jumpToRandomPoint(); }
+            }
+          },
+          onError: () => {
+            this.setState({ ytOk: false });
+            clearTimeout(this.clipTimer);
+            this.clipTimer = setTimeout(() => {
+              this.jumped = false;
+              const pl = this.player.getPlaylist && this.player.getPlaylist();
+              if (pl && pl.length > 1) this.player.playVideoAt(Math.floor(Math.random() * pl.length));
+              else if (this.player.nextVideo) this.player.nextVideo();
+            }, 400);
+          }
+        }
+      });
+    };
+
+    if (window.YT && window.YT.Player) { start(); return; }
+    const prev = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => {
+      if (typeof prev === 'function') prev();
+      start();
+    };
+    if (!document.querySelector('script[src*="iframe_api"]')) {
+      const s = document.createElement('script');
+      s.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(s);
+    }
+  }
+
+  chip(active) {
+    return {
+      padding: '11px 18px', borderRadius: 999, cursor: 'pointer',
+      fontFamily: "'Instrument Sans', sans-serif", fontSize: 13.5, fontWeight: 500,
+      border: active ? '1px solid #F7F7F5' : '1px solid rgba(247,247,245,0.25)',
+      background: active ? '#F7F7F5' : 'transparent',
+      color: active ? '#101214' : 'rgba(247,247,245,0.8)',
+      transition: 'all 180ms ease'
+    };
+  }
+
+  renderVals() {
+    const videoSrc = this.props.heroVideo;
+    const frames = ['assets/round-the-world.avif', 'assets/hanging.avif', 'assets/mane.avif', 'assets/flat-feet.avif'];
+    const secs = this.props.montageSeconds ?? 7;
+
+    const montage = videoSrc
+      ? React.createElement('div',
+          { style: { position: 'absolute', inset: 0, overflow: 'hidden', background: '#101214' } },
+          React.createElement('video', {
+            src: videoSrc, autoPlay: true, muted: true, loop: true, playsInline: true,
+            style: { position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', minWidth: '100%', minHeight: '100%', objectFit: 'cover' }
+          }))
+      : React.createElement('div',
+          { style: { position: 'absolute', inset: 0, overflow: 'hidden', background: '#101214' } },
+          React.createElement('img', {
+            key: 'poster',
+            src: 'assets/round-the-world.avif',
+            alt: '',
+            style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }
+          }),
+          React.createElement('div', {
+            key: 'ytlayer',
+            style: {
+              position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none',
+              containerType: 'size',
+              opacity: this.state.ytOk ? 1 : 0, transition: 'opacity 900ms ease'
+            }
+          }, React.createElement('div', {
+            ref: el => {
+              if (el && !this.ytHost) {
+                this.ytHost = document.createElement('div');
+                this.ytHost.style.width = '100%';
+                this.ytHost.style.height = '100%';
+                el.appendChild(this.ytHost);
+              }
+            },
+            style: {
+              position: 'absolute', top: '50%', left: '50%',
+              transform: 'translate(-50%,-50%) scale(1.35)',
+              width: 'max(100cqw, calc(100cqh * 16 / 9))',
+              height: 'max(100cqh, calc(100cqw * 9 / 16))'
+            }
+          }))
+    );
+
+    const e = this.state.enquiry;
+    const credStacked = this.state.credStacked;
+    const statStacked = this.state.tiny;
+    const statCell = i => statStacked
+      ? { padding: '22px 0', borderBottom: i < 3 ? '1px solid rgba(247,247,245,0.14)' : 'none' }
+      : {
+          padding: 'clamp(26px,3vw,38px) clamp(16px,2.4vw,34px) clamp(26px,3vw,38px) 0',
+          paddingLeft: i ? 'clamp(16px,2.4vw,34px)' : 0,
+          borderRight: i < 3 ? '1px solid rgba(247,247,245,0.14)' : 'none'
+        };
+    return {
+      montage,
+      campSignup: this.campSignupEl(),
+      credRef: this.credRef,
+      headerStyle: {
+        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 60,
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        gap: 'clamp(12px,2vw,32px)',
+        padding: this.state.narrow ? '10px clamp(14px,3vw,20px)' : '20px clamp(20px,3vw,48px)',
+        background: this.state.barSolid
+          ? 'rgba(10,10,11,0.86)'
+          : 'linear-gradient(180deg,rgba(10,10,11,0.72) 0%,rgba(10,10,11,0.34) 55%,rgba(10,10,11,0) 100%)',
+        boxShadow: this.state.barSolid ? 'none' : '0 26px 30px -10px rgba(10,10,11,0.34)',
+        borderBottom: this.state.barSolid ? '1px solid rgba(255,255,255,0.1)' : '1px solid transparent',
+        backdropFilter: this.state.barSolid ? 'blur(16px)' : 'none',
+        transition: 'background 300ms ease, border-color 300ms ease'
+      },
+      heroCopy: {
+        position: 'relative', zIndex: 2, color: '#fff',
+        alignSelf: this.state.narrow ? 'stretch' : 'end',
+        width: '100%', textAlign: 'left',
+        padding: '0 clamp(20px,3vw,56px)'
+      },
+      heroBtn: {
+        padding: '17px 24px', borderRadius: 999, textAlign: 'center',
+        display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 14,
+        border: '1px solid rgba(255,255,255,0.45)', color: '#fff',
+        fontSize: 12.5, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase',
+        width: this.state.tiny ? '100%' : 272, boxSizing: 'border-box'
+      },
+      credWrap: { display: 'flex', alignItems: 'flex-start', gap: credStacked ? 12 : 16 },
+      credRule: credStacked
+        ? { display: 'block', width: 2, alignSelf: 'stretch', background: '#FF3B21', flex: 'none', borderRadius: 2 }
+        : { display: 'block', width: 54, height: 3, marginTop: 5, background: '#FF3B21', flex: 'none' },
+      credList: credStacked
+        ? { display: 'flex', flexDirection: 'column', gap: 7 }
+        : { display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 9 },
+      credItem: { fontSize: 13, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#FF3B21', whiteSpace: 'nowrap' },
+      credSep: credStacked
+        ? { display: 'none' }
+        : { marginLeft: 9, color: 'rgba(255,59,33,0.55)' },
+      statGrid: {
+        display: 'grid',
+        gridTemplateColumns: statStacked ? '1fr' : 'repeat(4,1fr)',
+        gap: 0, marginTop: 8
+      },
+      statCell0: statCell(0), statCell1: statCell(1), statCell2: statCell(2), statCell3: statCell(3),
+      railStyleTight: null,
+      duoPortraits: {
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: 14, minHeight: 0
+      },
+      duoGrid: {
+        display: 'grid',
+        gridTemplateColumns: this.state.narrow ? '1fr' : '1.5fr 1fr',
+        gridAutoRows: this.state.narrow ? 'clamp(240px,60vw,340px)' : 'clamp(300px,38vw,520px)',
+        gap: 14, marginTop: 52
+      },
+      capGrid: {
+        display: 'grid',
+        gridTemplateColumns: this.state.narrow ? 'repeat(2,1fr)' : 'repeat(5,1fr)',
+        gap: 10, marginTop: 48
+      },
+      mosaicGrid: {
+        display: 'grid',
+        gridTemplateColumns: this.state.tiny ? 'repeat(2,1fr)' : this.state.narrow ? 'repeat(2,1fr)' : 'repeat(4,1fr)',
+        gridAutoRows: this.state.narrow ? 'clamp(120px,26vw,180px)' : 'clamp(160px,17vw,210px)',
+        gap: 12, marginTop: 44
+      },
+      eventFilm: this.tileFilmEl('oqSu4NdpP7k', 'assets/round-the-world.avif', 'Football event film'),
+      film1: this.campaignEl('YEfaogWLHYU', 'assets/mane.avif', 'adidas campaign film'),
+      film2: this.campaignEl('jgNVARUkEBU', 'assets/kane.avif', 'BT campaign film'),
+      film3: this.campaignEl('8c3M-zwqSRw', 'assets/flat-feet.avif', 'Coca-Cola campaign film'),
+      film4: this.campaignEl('oqSu4NdpP7k', 'assets/hanging.avif', 'Champions League campaign film'),
+      nav: this.navEl(),
+      heroGrid: this.state.narrow
+        ? { position: 'relative', minHeight: '100vh', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gap: 30, padding: '140px 0 clamp(40px,7vw,64px)' }
+        : { position: 'relative', minHeight: '100vh', overflow: 'hidden', display: 'grid', gridTemplateColumns: '1fr clamp(260px,24vw,360px)', alignItems: 'end', padding: '132px 0 clamp(44px,5.5vw,72px) clamp(48px,5vw,72px)' },
+      statLabel: { display: 'flex', alignItems: 'center', gap: 8, marginTop: 8, justifyContent: this.state.narrow ? 'flex-start' : 'flex-end' },
+      statsStyle: this.state.narrow
+        ? { position: 'relative', zIndex: 2, padding: '0 clamp(20px,3vw,48px)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 22px' }
+        : { position: 'relative', zIndex: 2, paddingRight: 'clamp(20px,3vw,48px)' },
+      statBox: this.state.narrow
+        ? { padding: '12px 0', borderTop: '1px solid rgba(255,255,255,0.14)', textAlign: 'left' }
+        : { padding: '14px 0', borderTop: '1px solid rgba(255,255,255,0.14)', textAlign: 'right' },
+      statLine: this.state.narrow
+        ? { gridColumn: '1 / -1', marginTop: 6, paddingTop: 14, borderTop: '1px solid rgba(255,255,255,0.14)', textAlign: 'left', fontSize: 14, lineHeight: 1.5, color: 'rgba(255,255,255,0.66)' }
+        : { paddingTop: 18, borderTop: '1px solid rgba(255,255,255,0.14)', textAlign: 'right', fontSize: 13.5, lineHeight: 1.55, color: 'rgba(255,255,255,0.6)' },
+      railStyle: this.state.narrow
+        ? { display: 'none' }
+        : { position: 'fixed', left: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 55, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 9, padding: '12px 4px 12px 3px', borderRadius: '0 8px 8px 0', background: 'rgba(10,10,11,0.62)', backdropFilter: 'blur(10px)' },
+      whoDaniel: this.chip(this.state.who !== 'duo'),
+      whoDuo: this.chip(this.state.who === 'duo'),
+      pickWhoDaniel: () => this.setState({ who: 'daniel' }),
+      pickWhoDuo: () => this.setState({ who: 'duo' }),
+      chipEvents: this.chip(e === 'Events'),
+      chipDJ: this.chip(e === 'DJ'),
+      chipBrands: this.chip(e === 'Brands'),
+      chipContent: this.chip(e === 'Content'),
+      chipMedia: this.chip(e === 'Media'),
+      chipOther: this.chip(e === 'Other'),
+      pickEvents: () => this.setState({ enquiry: 'Events' }),
+      pickDJ: () => this.setState({ enquiry: 'DJ' }),
+      pickBrands: () => this.setState({ enquiry: 'Brands' }),
+      pickContent: () => this.setState({ enquiry: 'Content' }),
+      pickMedia: () => this.setState({ enquiry: 'Media' }),
+      pickOther: () => this.setState({ enquiry: 'Other' })
+    };
+  }
+}
+</script>
+</body>
+</html>
